@@ -1,0 +1,12 @@
+*~
+[#]*
+.idea
+
+**/stl/*
+!/stl/mini/
+!/stl/micro/
+!/stl/nano/
+
+**/tmp/
+
+.DS_Store
