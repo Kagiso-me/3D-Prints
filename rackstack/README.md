@@ -1,5 +1,8 @@
 # rackstack
 
+Cloned from the original creator - Jazwa
+https://github.com/jazwa/rackstack
+
 ![display](media/renders/rackDisplayRounded.png)
 
 ### A modular 3d-printable mini rack system
