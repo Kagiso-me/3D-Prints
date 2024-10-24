@@ -1,10 +1,18 @@
 // Manually set this variable to toggle rack profile
-profileName = "default";
+profileName = "custom";
 
 fixedSideModules = true;
 
 _profileConfigs = [
-  
+    // You can introduce a custom profile like:
+    
+    ["custom", [
+      ["maxUnitWidth", 220],
+      ["maxUnitDepth", 200],
+      ["numRailScrews", 18]
+    ]], // To generate the stls for this custom profile, you would do:
+        // $ python3 rbuild.py -b all -c custom
+    
     ["default", [ // Default config. Will be overwritten by any other profiles
       ["maxUnitWidth", 180],
       ["maxUnitDepth", 180],
@@ -13,7 +21,7 @@ _profileConfigs = [
       ["mainRailScrewType", "m4"],
       ["mainRailSideMountScrewType", "m4"],
       ["rackFrameScrewType", "m3"],
-      ["baseRoundness", 3],
+      ["baseRoundness", 2],
     ]],
     ["nano", [
       ["maxUnitWidth", 105],
@@ -30,13 +38,6 @@ _profileConfigs = [
       ["maxUnitDepth", 205],
       ["numRailScrews", 16]
     ]]
-   // You can introduce a custom profile like:
-    ["custom", [
-      ["maxUnitWidth", 220],
-      ["maxUnitDepth", 200],
-      ["numRailScrews", 18]
-    ]], // To generate the stls for this custom profile, you would do:
-        // $ python3 rbuild.py -b all -c custom    
   ];
 
 function _getConfigValueRaw(profile, varName) = profile[search([varName], profile)[0]][1];
