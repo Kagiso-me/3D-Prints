@@ -1,5 +1,5 @@
 // Manually set this variable to toggle rack profile
-profileName = "custom";
+profileName = "default";
 
 fixedSideModules = true;
 
